@@ -141,5 +141,11 @@ faq_data = [
         "content": "If you need additional help, you can contact our support "
                    "team through the contact form on our website. We usually "
                    "respond within 24 hours on business days."
+    },
+    {
+        "id": "faq-021",
+        "title": "Opening times",
+        "content":  "We are open 08-22 every weekday, and closed every third sunday, while open every fifth saturday."
+                    "also, we are open on full moons, and whenever Jason Statham is featuring in a new movie.   "
     }
 ]
