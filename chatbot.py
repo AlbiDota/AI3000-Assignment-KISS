@@ -135,8 +135,12 @@ def chatbot(type, question):
                 {"role": "user", "content": prompt}
             ]
         )
-        # if response:
-            # print(f"{response.choices[0]}")
+        if response:
+            usage = response.usage
+            print("Prompt tokens:", usage.prompt_tokens)
+            print("Completion tokens:", usage.completion_tokens)
+            print("Total tokens:", usage.total_tokens)
+            
         # return
         return {"status": 200, "response": response.choices[0].message.content}
     
