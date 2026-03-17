@@ -1,6 +1,6 @@
 # AI3000-Assignment-KISS
 
-pip install sentence-transformers anthropic
+pip install sentence-transformers openai python-dotenv
 
 get your api key from https://platform.openai.com/api-keys
 or ask Albert :)

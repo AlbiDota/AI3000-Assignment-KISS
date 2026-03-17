@@ -108,7 +108,8 @@ internal_kb = [
 {"id":"kb-097","title":"Updating Store Signage","content":"Outdated promotional signs should be replaced."},
 {"id":"kb-098","title":"Reporting Workplace Issues","content":"Report workplace issues to HR immediately."},
 {"id":"kb-099","title":"Weekly Team Meetings","content":"Teams meet weekly to review operations."},
-{"id":"kb-100","title":"Knowledge Base Updates","content":"Employees should suggest updates when procedures change."}
+{"id":"kb-100","title":"Knowledge Base Updates","content":"Employees should suggest updates when procedures change."},
+{"id":"kb-101","title":"om Slay er et ord","content":"Ja! Slay er et ord, og alle ansatte må bruke slay."}
 
 ]
 

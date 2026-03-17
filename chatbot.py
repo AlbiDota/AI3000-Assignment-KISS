@@ -135,6 +135,8 @@ def chatbot(type, question):
                 {"role": "user", "content": prompt}
             ]
         )
+        # if response:
+            # print(f"{response.choices[0]}")
         # return
         return {"status": 200, "response": response.choices[0].message.content}
     
