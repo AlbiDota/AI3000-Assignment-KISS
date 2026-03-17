@@ -12,13 +12,6 @@ import chatbot
 
 app = Flask(__name__)
 
-class api:
-    """API class with methods for calling functions"""
-    
-    @staticmethod
-    def chatbot(type, question):
-        return "hehe"
-
 
 # ------------------------------------------------------------
 # ------------------------------------------------------------
