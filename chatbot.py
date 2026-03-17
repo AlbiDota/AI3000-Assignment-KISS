@@ -30,9 +30,9 @@ and knowledge base of chosen library and filter out
 the "weaker" matches, or append their "score" in some way.
 Afterwards, we feed the relevant options from the knowledge base
 into a bigger prompt, along with the users input question.
-This prompt will be formatted and fed to a free version
-of "claude-sonnet-4-2025-05-14"
-Then we return claudes answer to the user.
+We have a budget of $9 at openAI to play around with their different models.
+We send the prompt to our chosen model,
+Then we return its answer to the user.
 
 REQUIREMENTS:
     pip install sentence-transformers openai python-dotenv
