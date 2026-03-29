@@ -51,11 +51,14 @@ load_dotenv()
 import faq
 import internal_doc
 
-def chatbot(type, question):
+def chatbot(type, question, history=None):
     
     # input validation
     if type != "faq" and type != "internal":
         return {"status":400, "message":"Bad request: type must be 'internal' or 'faq'"}
+
+    if not question:
+        return {"status":400, "message":"Bad request: missing question"}
 
     # fetching correct knowledge base, based on specified type
     knowledge_base = []
@@ -105,11 +108,21 @@ def chatbot(type, question):
             f"[Source: {doc["id"]} - {doc["title"]}]\n{doc["content"]}"
         )
     context = "\n\n".join(context_parts)
-
-    prompt = f"""
-    Answer the question based ONLY on the following documents.
-    If the answer is NOT in the documents, say "I don't have information about that."
+    print(context)
+    promp = """"    
+    Answer the question based ONLY on the following documents and context (if given any).
+    If the answer is NOT in the documents, say "I don't have information about that." but try to avoid this.
     Always mention which source document(s) you used.
+    """
+    prompt = f"""
+
+    Du skal svare KUN basert på følgende "documents" og context/history (hvis du har blitt gitt noe).
+    HVIS du IKKE klarer å produsere et godt svar utifra "documents" eller contexten du er gitt, MÅ du innrømme at du 
+    mangler informasjon, og svar gjerne med "Det har jeg ikke tilstrekkelig med informasjon om" eller liknende.
+    ALLTID nevn hvilke kilder du har brukt fra "documents"
+    
+    HISTORY/CONTEXT:
+    {history}
 
     DOCUMENTS:
     {context}
@@ -126,10 +139,12 @@ def chatbot(type, question):
 
         client = OpenAI()
 
-        system_prompt = "You are a chatbot for our game store. Answer truthfully and concise."
+        # system_prompt = "You are a chatbot and knowledge-base for our game store. Answer truthfully and concise."
+        system_prompt = "Du er en chatbot og knowledge-base for vår spillbutikk. Du skal svare ærlig og kort. (Du er navngitt 'bot' i chat context)"
 
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            # model="gpt-3.5-turbo",
+            model="gpt-5-nano",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt}

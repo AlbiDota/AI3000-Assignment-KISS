@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>AI3000-Assignment-KISS</title>
+        <style>
+            .thebox {
+                display: flex; 
+                flex-direction: column; 
+                justify-content: center; 
+                align-items: center; 
+            }
+            .radios { 
+                /* idk im just trying stuff at this point mannnnnnnn */
+                /* align-self:auto; */
+                margin-bottom: 0.5vh;
+                /* margin-right: 60vw; */
+                /* margin-inline-start: 1vw; */
+            }
+            #chatbox { 
+                border: 0.1vh solid black; 
+                padding: 1vh; 
+                margin-bottom: 1vh;
+                height: 33vh; 
+                overflow-y: auto; 
+                width: 80vw; 
+                min-height: 300px;
+                max-width: 1000px;
+            }
+            .user { 
+                color: green; 
+            }
+            .bot { 
+                color: blueviolet; 
+            }
+            #question {
+                border: 0.1vh solid black;
+                width: 70vw; 
+                max-width: 900px;
+            }
+            #sendBtn {
+                border: 0.1vh solid black;
+                width: 10vw; 
+                transition-duration: 0.3s;
+                /* max-width: 10vw; */
+            }
+            #sendBtn:hover {
+                background: linear-gradient(rgb(63, 215, 63), rgb(227, 179, 22) 100%);
+            }
+            .bottomline {
+                display: flex;
+                height: 3vh; 
+                min-height: 30px;
+                width: 80vw;
+                max-width: 1000px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="thebox">
+
+            <div class="radios">
+                <label><input type="radio" name="type" value="faq" checked> FAQ</label>
+                <label><input type="radio" name="type" value="internal"> Internal docs</label>
+            </div>
+            <div id="chatbox"></div>
+            <div class="bottomline">
+                <input id="question" type="text" placeholder="Ask the bot" />
+                <button id="sendBtn">Send</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

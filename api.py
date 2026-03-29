@@ -5,13 +5,14 @@ FLASK API
 """
 # dependencies
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 # chatbot.py
 import chatbot
 
 
 app = Flask(__name__)
-
+CORS(app)
 
 # ------------------------------------------------------------
 # ------------------------------------------------------------
@@ -39,8 +40,9 @@ def chat():
 
         type = data.get("type")
         question = data.get("question")
+        history = data.get("history")
 
-        response = chatbot.chatbot(type, question)
+        response = chatbot.chatbot(type, question, history)
 
         status = response.get("status", 200)
 

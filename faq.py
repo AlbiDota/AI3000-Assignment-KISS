@@ -146,6 +146,6 @@ faq_data = [
         "id": "faq-021",
         "title": "Opening times",
         "content":  "We are open 08-22 every weekday, and closed every third sunday, while open every fifth saturday."
-                    "also, we are open on full moons, and whenever Jason Statham is featuring in a new movie.   "
+                    "also, we are open on full moons, and whenever a new movie featuring Jason Statham is released.   "
     }
 ]
