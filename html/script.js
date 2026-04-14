@@ -15,19 +15,34 @@ function getSelectedType() {
 
 function renderChat() {
     chatBox.innerHTML = chatHistory.map(e => {
-        const tag = e.role == "bot" ? "bot" : "user";
-        return `<div class="${tag}"><strong>${e.role}:</strong> ${e.content}</div>`;
+        let tag = e.role;
+
+        if (e.role == "assistant") {
+            tag = "bot";
+        }
+        if (tag=="bot" && e.content.toLowerCase().includes("error")) {
+            tag = "error";
+        }
+        
+        return `<div class="${tag}"><strong>${tag}:</strong> ${e.content}</div>`;
     }).join("");
+}
+
+function displayMessage(message, role) {
+    return `<div class="${role}"><strong>${role}:</strong> ${message}</div>`;
 }
 
 async function sendQuestion() {
     const question = qInput.value.trim();
     const type = getSelectedType();
-    if (!question)
+
+    if (!question.trim()){
         return;
+    }
 
     chatHistory.push({role: "user", content: question});
     renderChat();
+    displayMessage(question, "user");
     qInput.value = "";
 
     const payload = {
@@ -50,13 +65,18 @@ async function sendQuestion() {
 
         if (res.ok) {
             const botText = resData.response;
-            chatHistory.push({role: "bot", content: botText});
+            chatHistory.push({role: "assistant", content: botText});
+
+            displayMessage(botText, "bot");
         } else {
-            chatHistory.push({role: "bot", content: `Error: ${resData.error}`});
+            const errText = resData.message;
+            chatHistory.push({role: "assistant", content: `Error: ${resData.error}`});
+            displayMessage(errText, "error");
         }
 
     } catch(err) {
-        chatHistory.push({role: "bot", content: `api error: ${err.message}`});
+        // chatHistory.push({role: "bot", content: `api error: ${err.message}`});
+        displayMessage("Error:"+err.message, "error");
     }
 
     renderChat();

@@ -48,8 +48,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # our knowledge libraries of doom
-import faq
-import internal_doc
+import documents.faq as faq
+import documents.internal_doc as internal_doc
 
 def chatbot(type, question, history=None):
     
@@ -142,13 +142,24 @@ def chatbot(type, question, history=None):
         # system_prompt = "You are a chatbot and knowledge-base for our game store. Answer truthfully and concise."
         system_prompt = "Du er en chatbot og knowledge-base for vår spillbutikk. Du skal svare ærlig og kort. (Du er navngitt 'bot' i chat context)"
 
+        # messages
+        messages = [
+            {"role": "system", "content": system_prompt}
+        ]
+
+        if history:
+            messages.extend(history);
+        
+        messages.append({"role": "user", "content": prompt})
+
         response = client.chat.completions.create(
             # model="gpt-3.5-turbo",
             model="gpt-5-nano",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": prompt}
-            ]
+            # messages=[
+            #     {"role": "system", "content": system_prompt},
+            #     {"role": "user", "content": prompt}
+            # ]
+            messages=messages
         )
         if response:
             usage = response.usage
