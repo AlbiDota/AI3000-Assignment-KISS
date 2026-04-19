@@ -8,7 +8,10 @@
 
 ## How to run
 ### Dependencies
+
+```
 pip install sentence-transformers openai python-dotenv
+```
 
 <br/>
 
