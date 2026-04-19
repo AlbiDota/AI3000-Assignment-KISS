@@ -43,13 +43,15 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from dotenv import load_dotenv
+import json
 
 # api key from env file :D
 load_dotenv()
 
 # our knowledge libraries of doom
-import documents.faq as faq
-import documents.internal_doc as internal_doc
+# import documents.faq as faq
+# import documents.internal_doc as internal_doc
+# swapped with json files for a better and more realistic approach
 
 def chatbot(type, question, history=None):
     
@@ -63,9 +65,11 @@ def chatbot(type, question, history=None):
     # fetching correct knowledge base, based on specified type
     knowledge_base = []
     if type=="faq":
-        knowledge_base = faq.faq_data
+       with open('documents/faq.json', 'r') as f:
+            knowledge_base = json.load(f)
     elif type=="internal":
-        knowledge_base = internal_doc.internal_kb
+        with open('documents/internal_kb.json', 'r') as f:
+            knowledge_base = json.load(f)
     
 
     # declaring embedding tool
@@ -122,7 +126,7 @@ def chatbot(type, question, history=None):
     ALLTID nevn hvilke kilder du har brukt fra "documents" Kildehenvisninger skal KUN foregå på slutten av svaret ditt.
     Kilder skal ALLTID være på slutten av svaret, og formattert for eksempel som "kilder brukt: faq-034, faq-025, faq-026, faq-031"
     Du skal svare kort og ryddig.
-    
+
     HISTORY/CONTEXT:
     {history}
 
