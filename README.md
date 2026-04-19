@@ -65,12 +65,12 @@ The "history" parameter is entirely optional, and is not needed in the post body
     "question": "Selger dere figurer og maling til warhammer?",
     "history": [
         {
-            'role': 'user', 
-            'content': 'er det åpent på torsdag?'
+            "role": "user", 
+            "content": "er det åpent på torsdag?"
         },
         {
-            'role': 'assistant', 
-            'content': 'Ja. Butikken er åpen på torsdag. Åpningstiden er 08:00–22:00 på alle hverdager (mandag–fredag), så torsdag er åpen.\n\nKilder brukt: faq-021 - Opening Times.'
+            "role": "assistant", 
+            "content": "Ja. Butikken er åpen på torsdag. Åpningstiden er 08:00–22:00 på alle hverdager (mandag–fredag), så torsdag er åpen.\n\nKilder brukt: faq-021 - Opening Times."
         }
     ]
 }
