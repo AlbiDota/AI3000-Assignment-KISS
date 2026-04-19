@@ -147,5 +147,175 @@ faq_data = [
         "title": "Opening times",
         "content":  "We are open 08-22 every weekday, and closed every third sunday, while open every fifth saturday."
                     "also, we are open on full moons, and whenever a new movie featuring Jason Statham is released.   "
+    },
+    {
+        "id": "faq-021",
+        "title": "Opening Times",
+        "content": "Our store is open from 08:00 to 22:00 every weekday, meaning monday, tuesday, wednesday, thursday, friday. We are closed every third Sunday and open every fifth Saturday. Additionally, we are open on full moons and whenever a new Jason Statham movie is released."
+    },
+    {
+        "id": "faq-023",
+        "title": "Magic: The Gathering Tournaments",
+        "content": "We host regular Magic: The Gathering tournaments. Check our events page for dates, locations, and registration details."
+    },
+    {
+        "id": "faq-024",
+        "title": "Pre-Order Updates",
+        "content": "If you’ve pre-ordered a product, you’ll receive an email when it's shipped. You can also check your order status on the 'My Orders' page."
+    },
+    {
+        "id": "faq-025",
+        "title": "Model Painting Classes",
+        "content": "We offer beginner to advanced painting workshops for Warhammer miniatures. Visit our events page for more details."
+    },
+    {
+        "id": "faq-026",
+        "title": "Custom Warhammer Terrain Orders",
+        "content": "We create custom Warhammer terrain pieces. Contact us for designs, pricing, and timelines for your unique terrain project."
+    },
+    {
+        "id": "faq-027",
+        "title": "Card Sleeves and Accessories",
+        "content": "We offer a wide range of card sleeves, deck boxes, and playmats for Magic: The Gathering and other collectible card games. Check our accessories section for more."
+    },
+    {
+        "id": "faq-028",
+        "title": "Magic: The Gathering Card Rarities",
+        "content": "Magic cards come in different rarities, from common to mythic rare. If you're looking for specific rarities, use our advanced search filters."
+    },
+    {
+        "id": "faq-029",
+        "title": "Product Restocks",
+        "content": "When a product is restocked, we notify customers who have signed up for the waiting list. You can join the list on the product page."
+    },
+    {
+        "id": "faq-030",
+        "title": "Bulk Order Discounts",
+        "content": "If you're ordering for a club, school, or event, contact us for bulk order discounts and shipping options."
+    },
+    {
+        "id": "faq-031",
+        "title": "Special Edition Warhammer Sets",
+        "content": "We carry special edition Warhammer sets, including limited releases. Stay tuned to our newsletter for the latest information on these exclusive products."
+    },
+    {
+        "id": "faq-032",
+        "title": "Gift Cards Availability",
+        "content": "Gift cards can be purchased on our website in any amount. They are valid both online and in-store and are delivered instantly via email."
+    },
+    {
+        "id": "faq-033",
+        "title": "Magic: The Gathering Card Condition",
+        "content": "We carefully grade the condition of all Magic: The Gathering cards. Cards are rated from 'Near Mint' to 'Heavily Played'."
+    },
+    {
+        "id": "faq-034",
+        "title": "Warhammer Painting Kits",
+        "content": "We offer starter painting kits for Warhammer miniatures. These kits include brushes, paints, and other essential supplies."
+    },
+    {
+        "id": "faq-035",
+        "title": "Pre-Painted Warhammer Models",
+        "content": "Pre-painted Warhammer miniatures are available for those who prefer ready-to-play models. Browse our 'Pre-Painted' section for options."
+    },
+    {
+        "id": "faq-036",
+        "title": "Magic: The Gathering Booster Boxes",
+        "content": "Booster boxes of Magic: The Gathering are available for preorder and in limited quantities. They are a great way to build your collection."
+    },
+    {
+        "id": "faq-037",
+        "title": "Tournament Formats",
+        "content": "We host various Magic: The Gathering formats such as Standard, Modern, and Commander. Check the event details for the specific format."
+    },
+    {
+        "id": "faq-038",
+        "title": "Shipping to Europe",
+        "content": "We offer international shipping to most European countries. Delivery times and costs vary depending on the destination and shipping method."
+    },
+    {
+        "id": "faq-039",
+        "title": "Packaging for Miniatures",
+        "content": "All miniatures are carefully packaged to prevent damage during shipping. We use foam inserts and protective materials for safe delivery."
+    },
+    {
+        "id": "faq-040",
+        "title": "Magic: The Gathering Singles",
+        "content": "We sell individual Magic: The Gathering cards. Browse our singles section for rare cards, promos, and older sets."
+    },
+    {
+        "id": "faq-041",
+        "title": "Return Policy for Used Products",
+        "content": "We only accept returns for used products if they are defective. Please contact customer service for assistance if you believe your item is faulty."
+    },
+    {
+        "id": "faq-042",
+        "title": "Loyalty Program Points",
+        "content": "Earn loyalty points on every purchase. These points can be redeemed for discounts on future orders. Check your account for your current point balance."
+    },
+    {
+        "id": "faq-043",
+        "title": "Magic: The Gathering Draft Nights",
+        "content": "Join our weekly draft nights for Magic: The Gathering. Buy a booster pack, draft a deck, and compete for prizes with other players."
+    },
+    {
+        "id": "faq-044",
+        "title": "In-Store Pickup",
+        "content": "If you prefer not to wait for shipping, you can select in-store pickup when placing an online order. We’ll have your items ready for you to collect."
+    },
+    {
+        "id": "faq-045",
+        "title": "Model Building Tools",
+        "content": "We offer a variety of tools for model building, such as hobby knives, files, and cutting mats. Find the perfect tools for your next project in our store."
+    },
+    {
+        "id": "faq-046",
+        "title": "Magic: The Gathering Collection Management",
+        "content": "We offer software and resources to help you organize and manage your Magic: The Gathering collection. Check our website for the best tools."
+    },
+    {
+        "id": "faq-047",
+        "title": "Warhammer Army Lists",
+        "content": "Need help with building your Warhammer army? We provide resources and guides to help you create the perfect army list for your next battle."
+    },
+    {
+        "id": "faq-048",
+        "title": "Sponsoring Tournaments",
+        "content": "If you are a business or organization looking to sponsor a tournament, please reach out to our events team for more details."
+    },
+    {
+        "id": "faq-049",
+        "title": "Magic: The Gathering Card Grades",
+        "content": "Cards are graded based on their condition. We offer a grading scale that includes conditions from 'Mint' to 'Poor'."
+    },
+    {
+        "id": "faq-050",
+        "title": "Restock Notifications",
+        "content": "You can sign up for restock notifications on any product page. We’ll notify you when the item becomes available again."
+    },
+    {
+        "id": "faq-051",
+        "title": "Customer Loyalty Discounts",
+        "content": "As a loyal customer, you may be eligible for special discounts and offers. Check your account for loyalty rewards."
+    },
+    {
+        "id": "faq-052",
+        "title": "Gift Wrapping Service",
+        "content": "We offer gift wrapping services for a small fee. Select this option during checkout for a beautifully wrapped package."
+    },
+    {
+        "id": "faq-053",
+        "title": "Free Shipping on Orders Over $100",
+        "content": "Get free shipping on orders over $100 within the country. International shipping fees still apply."
+    },
+    {
+        "id": "faq-054",
+        "title": "Event Registration Deadlines",
+        "content": "Please ensure you register for events by the specified deadlines. Late registrations may not be accepted."
+    },
+    {
+        "id": "faq-055",
+        "title": "Magic: The Gathering Deck Building Tips",
+        "content": "Need help building a Magic: The Gathering deck? Visit our blog for tips on constructing competitive and fun decks."
     }
 ]
