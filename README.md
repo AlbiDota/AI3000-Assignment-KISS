@@ -22,7 +22,10 @@ Get your api key from [OpenAi](https://platform.openai.com/api-keys),
 or contact Albert to borrow one :)
 
 Create a .env file in this folder and place the API key there like so:
+
+```
 OPENAI_API_KEY="api_key_here_hehe"
+```
 
 <br/>
 
