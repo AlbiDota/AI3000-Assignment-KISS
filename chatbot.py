@@ -76,10 +76,8 @@ def chatbot(type, question, history=None):
     # embedder = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
     embedder = SentenceTransformer("all-MiniLM-L6-v2")
 
-    # pre-loading embeddings for chosen documents
-    # optimally, we would do this once and store them permanently in separate documents or db :D
-    doc_texts = [doc["content"] for doc in knowledge_base]
-    doc_embeddings = embedder.encode(doc_texts)
+    # fetching semantic vectors from document
+    doc_embeddings = np.array([doc["semantic_vectors"] for doc in knowledge_base])
 
     # helper function for finding top_k most relevant documents for the given query
     def retrieve(q, top_k=2):
@@ -88,7 +86,7 @@ def chatbot(type, question, history=None):
 
         # compare with document vectors
         scores = cosine_similarity(question_embeddings, doc_embeddings)[0]
-
+        print(scores)
         # get indexes of top hits
         top_indexes = np.argsort(scores)[::-1][:top_k]
 
@@ -112,12 +110,8 @@ def chatbot(type, question, history=None):
             f"[Source: {doc["id"]} - {doc["title"]}]\n{doc["content"]}"
         )
     context = "\n\n".join(context_parts)
-    print(context)
-    promp = """"    
-    Answer the question based ONLY on the following documents and context (if given any).
-    If the answer is NOT in the documents, say "I don't have information about that." but try to avoid this.
-    Always mention which source document(s) you used.
-    """
+    # print(context)
+
     prompt = f"""
 
     Du skal svare KUN basert på følgende "documents" og context/history (hvis du har blitt gitt noe).
