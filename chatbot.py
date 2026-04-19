@@ -86,10 +86,10 @@ def chatbot(type, question, history=None):
         scores = cosine_similarity(question_embeddings, doc_embeddings)[0]
 
         # get indexes of top hits
-        top_indices = np.argsort(scores)[::-1][:top_k]
+        top_indexes = np.argsort(scores)[::-1][:top_k]
 
         results = []
-        for i in top_indices:
+        for i in top_indexes:
             results.append({
                 "document": knowledge_base[i],
                 "score": scores[i]
@@ -98,7 +98,7 @@ def chatbot(type, question, history=None):
     # end of helper function
 
     # calling helper function to retrieve relevant documents with cosine similarity
-    retrieved = retrieve(q=question, top_k=5)
+    retrieved = retrieve(q=question, top_k=8)
     # print(retrieved)
     # retrieve relevant documents and build prompt
     context_parts = []
@@ -119,7 +119,9 @@ def chatbot(type, question, history=None):
     Du skal svare KUN basert på følgende "documents" og context/history (hvis du har blitt gitt noe).
     HVIS du IKKE klarer å produsere et godt svar utifra "documents" eller contexten du er gitt, MÅ du innrømme at du 
     mangler informasjon, og svar gjerne med "Det har jeg ikke tilstrekkelig med informasjon om" eller liknende.
-    ALLTID nevn hvilke kilder du har brukt fra "documents"
+    ALLTID nevn hvilke kilder du har brukt fra "documents" Kildehenvisninger skal KUN foregå på slutten av svaret ditt.
+    Kilder skal ALLTID være på slutten av svaret, og formattert for eksempel som "kilder brukt: faq-034, faq-025, faq-026, faq-031"
+    Du skal svare kort og ryddig.
     
     HISTORY/CONTEXT:
     {history}
