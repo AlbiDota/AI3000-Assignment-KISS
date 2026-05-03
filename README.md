@@ -10,7 +10,7 @@
 ### Dependencies
 
 ```
-pip install sentence-transformers openai python-dotenv
+pip install -r requirements.txt
 ```
 
 <br/>
