@@ -48,6 +48,8 @@ Located in the /html folder, you can just launch the html file with the server r
 You will see a chatbox with an input field and a box to display the chat messages.
 
 ![chatbox-example](/html/example1.png)
+
+
 ![chatbox-example](/html/example3.png)
 
 Here you can simply send questions, and both your input and the OpenAI output will be displayed here.
