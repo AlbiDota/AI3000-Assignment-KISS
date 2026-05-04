@@ -68,7 +68,7 @@ def chatbot(type, question, history=None):
        with open('documents/faq.json', 'r') as f:
             knowledge_base = json.load(f)
     elif type=="internal":
-        with open('documents/internal_kb.json', 'r') as f:
+        with open('documents/internal_doc.json', 'r') as f:
             knowledge_base = json.load(f)
     
 
