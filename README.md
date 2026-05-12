@@ -1,10 +1,15 @@
 # AI3000-Assignment-KISS
+
+Assignment description can be found in [ASSIGNMENT.md](/ASSIGNMENT.md)
+
+
 ## Contributors
 - [Oscar](https://github.com/OscarGamst)
 - [Sara](https://github.com/saraechk)
 - [Albert](https://github.com/AlbiDota)
 
----
+<br/>
+
 
 ## How to run
 ### Dependencies

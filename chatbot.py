@@ -113,11 +113,7 @@ def chatbot(type, question, history=None):
         )
     context = "\n\n".join(context_parts)
     print(context)
-    promp = """"    
-    Answer the question based ONLY on the following documents and context (if given any).
-    If the answer is NOT in the documents, say "I don't have information about that." but try to avoid this.
-    Always mention which source document(s) you used.
-    """
+
     prompt = f"""
 
     Du skal svare KUN basert på følgende "documents" og context/history (hvis du har blitt gitt noe).
